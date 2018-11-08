@@ -33,6 +33,7 @@ namespace VueIdServer
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddAndConfigureIdentityServer(Configuration.GetConnectionString("IdentityServer"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
