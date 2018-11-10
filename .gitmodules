@@ -1,0 +1,4 @@
+[submodule "AspNetCore.Identity.MongoDbCore"]
+	path = AspNetCore.Identity.MongoDbCore
+	url = https://github.com/hxhieu/AspNetCore.Identity.MongoDbCore
+	branch = master

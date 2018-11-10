@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VueIdServer.Data", "VueIdSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VueIdServer.Stores", "VueIdServer.Stores\VueIdServer.Stores.csproj", "{67CFE614-3971-4BFD-93B1-0C2C11161E42}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Identity.MongoDbCore", "AspNetCore.Identity.MongoDbCore", "{142F4580-6DED-4D99-8F13-9388A888910E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Identity.MongoDbCore", "AspNetCore.Identity.MongoDbCore\src\AspNetCore.Identity.MongoDbCore.csproj", "{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +62,20 @@ Global
 		{67CFE614-3971-4BFD-93B1-0C2C11161E42}.Release|x64.Build.0 = Release|Any CPU
 		{67CFE614-3971-4BFD-93B1-0C2C11161E42}.Release|x86.ActiveCfg = Release|Any CPU
 		{67CFE614-3971-4BFD-93B1-0C2C11161E42}.Release|x86.Build.0 = Release|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Debug|x64.Build.0 = Debug|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Debug|x86.Build.0 = Debug|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Release|x64.ActiveCfg = Release|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Release|x64.Build.0 = Release|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Release|x86.ActiveCfg = Release|Any CPU
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56E724C7-02B8-4AA2-97CC-BAC4BEF91ED4} = {142F4580-6DED-4D99-8F13-9388A888910E}
 	EndGlobalSection
 EndGlobal
