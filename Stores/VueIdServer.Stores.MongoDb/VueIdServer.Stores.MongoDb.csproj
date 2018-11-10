@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Data\VueIdServer.Data.Common\VueIdServer.Data.Common.csproj" />
+    <ProjectReference Include="..\..\Data\VueIdServer.Data.MongoDb\VueIdServer.Data.MongoDb.csproj" />
   </ItemGroup>
 
 </Project>

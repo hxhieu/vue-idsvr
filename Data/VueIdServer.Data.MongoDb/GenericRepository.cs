@@ -13,11 +13,11 @@ namespace VueIdServer.Data.MongoDb
     {
         private static IMongoClient _client;
         private static IMongoDatabase _database;
-        public GenericRepository(IOptions<MongoDbOptions> options)
+        public GenericRepository(IOptions<DatabaseOptions> options)
         {
             var config = options.Value;
-            _client = new MongoClient(config.MongoConnection);
-            _database = _client.GetDatabase(config.MongoDatabaseName);
+            _client = new MongoClient(config.ConnectionString);
+            _database = _client.GetDatabase(config.Database);
         }
         public IQueryable<T> All<T>() where T : class, new()
         {

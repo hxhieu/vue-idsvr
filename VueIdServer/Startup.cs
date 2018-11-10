@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using VueIdServer.Data.Common;
+using VueIdServer.Stores.MongoDb;
 
 namespace VueIdServer
 {
@@ -33,6 +35,16 @@ namespace VueIdServer
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // Dependency Injection - Register the IConfigurationRoot instance mapping to our "ConfigurationOptions" class 
+            services.Configure<DatabaseOptions>(options => Configuration.Bind("DatabaseOptions", options));
+
+            // ---  configure identity server with MONGO Repository for stores, keys, clients and scopes ---
+            services.AddIdentityServer()
+                .AddDeveloperSigningCredential()
+                .AddMongoDbStores()
+                // .AddTestUsers(Config.GetUsers())
+                ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
