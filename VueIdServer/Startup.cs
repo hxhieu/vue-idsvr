@@ -70,6 +70,8 @@ namespace VueIdServer
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseMongoDbStores();
         }
     }
 }
