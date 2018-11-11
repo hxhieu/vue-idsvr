@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\AspNetCore.Identity.MongoDbCore\src\AspNetCore.Identity.MongoDbCore.csproj" />
+    <ProjectReference Include="..\..\Data\VueIdServer.Data.Common\VueIdServer.Data.Common.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>

@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using VueIdServer.Data.Common;
 using VueIdServer.Stores.MongoDb;
+using IdentityServer4.AspNetIdentity;
+using VueIdServer.Identities.MongoDb;
 
 namespace VueIdServer
 {
@@ -39,11 +41,14 @@ namespace VueIdServer
             // Dependency Injection - Register the IConfigurationRoot instance mapping to our "ConfigurationOptions" class 
             services.Configure<DatabaseOptions>(options => Configuration.Bind("DatabaseOptions", options));
 
+            services.AddIdentityUsingMongoDb(options => Configuration.Bind("DatabaseOptions", options));
+
             // ---  configure identity server with MONGO Repository for stores, keys, clients and scopes ---
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddMongoDbStores()
                 // .AddTestUsers(Config.GetUsers())
+                .AddAspNetIdentity<ApplicationUser>()
                 ;
         }
 
@@ -71,6 +76,7 @@ namespace VueIdServer
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
+            app.UseIdentityServer();
             app.UseMongoDbStores();
         }
     }
